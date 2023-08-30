@@ -1,59 +1,74 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            body {
-              background-color: rgb(19, 56, 68);
-            }
-            
-            h1 {
-              color: white;
-              text-align: left;
-            }
-            
-            p {
-            color: rgb(143, 202, 219);
-              font-family: Arial, Helvetica, sans-serif;
-              font-size: 20px;
-            }
-            </style>
-    </head>
+  <head>
+    <title>Forms</title>
+    <style>
+        body {
+          background-color: rgb(19, 56, 68);
+        }
+
+        text {
+          font-size: 9px;
+        }
+        
+
+        h1 {
+          color: white;
+          text-align: left;
+        }
+        
+        p {
+        color: rgb(143, 202, 219);
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 20px;
+        }
+      </style>
+  </head>
+  
+  <body>
+    <h1>HTML Forms</h1>
     
-    <body>
-        <h1>HTML Forms</h1>
+    <form action="/action_page.php">
+      <h2><p>Fill the following form and answer the questions.</p></h2>
+      
+      <fieldset>
+          <legend>Personal info:</legend><br>
+
+          <label for="fname">Enter Your First Name:</label><br>
+          <input type="text" id="fname" name="fname" required><br><br>
+
+          <label for="lname">Enter Your Last Name:</label><br>
+          <input type="text" id="lname" name="lname"  required><br><br>
+
+          <label for="bd">Enter your Birth date:</label><br>
+          <input type="bd" id="bd" name="bd" placeholder="MM-DD-YYYY" pattern="(0[1-9]|1[1,2])-(0[1-9]|[12][0-9]|3[01])-(19|20)\d{2}"  required><br><br>
+
+      </fieldset><br>
+      
+      <fieldset>
+        <legend>Questions:</legend>
+
+        <h3>The answer is really big. What is the answer?</h3>
+        <input type="radio" id="THE ANSWER" name="response" value="THE ANSWER">
+        <label for="THE ANSWER">THE ANSWER</label><br>
+        <input type="radio" id="Really big" name="response" value="Really big">
+        <label for="Really big">Really big</label><br>
+        <input type="radio" id="An elephant" name="response" value="An elephant">
+        <label for="An elephant">An elephant</label><br><br>
         
-        
-        <form action="/action_page.php">
-            <h2><p>Fill the following form.</p></h2>
-            
-            <fieldset>
-                <legend>Personal info:</legend>
+        <h3>What is the biggest lie in the entire universe?</h3>
+        <input type="checkbox" id="1" name="1" value="1">
+        <label for="1"> I will do it tomorrow</label><br>
+        <input type="checkbox" id="2" name="2" value="2">
+        <label for="2"> I have read and agree to the Terms & Conditions</label><br>
+      
+      </fieldset><br>
 
-                <label for="fname">Enter Your First Name:</label><br>
-                <input type="text" id="fname" name="fname" required><br><br>
+        <input type="submit" value="Submit">
+    </form> 
+      
+      
 
-                <label for="lname">Enter Your Last Name:</label><br>
-                <input type="text" id="lname" name="lname"  required><br><br>
-
-                <label for="bd">Enter your Birth date:</label><br>
-                <input type="bd" id="bd" name="bd" placeholder="MM-DD-YYYY" pattern="(0[1-9]|1[1,2])-(0[1-9]|[12][0-9]|3[01])-(19|20)\d{2}"  required><br><br>
-
-            </fieldset>
-
-            <h4>The answer is really big.</h4>
-            <input type="radio" id="THE ANSWER" name="response" value="THE ANSWER">
-            <label for="THE ANSWER">THE ANSWER</label><br>
-            <input type="radio" id="Really big" name="response" value="Really big">
-            <label for="Really big">Really big</label><br>
-            <input type="radio" id="An elephant" name="response" value="An elephant">
-            <label for="An elephant">An elephant</label><br><br>
-       
-
-            <input type="submit" value="Submit">
-          </form> 
-        
-        
-
-    </body>
+  </body>
 
 </html>
