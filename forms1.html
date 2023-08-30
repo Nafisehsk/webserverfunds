@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+              background-color: rgb(19, 56, 68);
+            }
+            
+            h1 {
+              color: white;
+              text-align: left;
+            }
+            
+            p {
+            color: rgb(143, 202, 219);
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 20px;
+            }
+            </style>
+    </head>
+    
+    <body>
+        <h1>HTML Forms</h1>
+        
+        
+        <form action="/action_page.php">
+            <h2><p>Fill the following form.</p></h2>
+            
+            <fieldset>
+                <legend>Personal info:</legend>
+
+                <label for="fname">Enter Your First Name:</label><br>
+                <input type="text" id="fname" name="fname" required><br><br>
+
+                <label for="lname">Enter Your Last Name:</label><br>
+                <input type="text" id="lname" name="lname"  required><br><br>
+
+                <label for="bd">Enter your Birth date:</label><br>
+                <input type="bd" id="bd" name="bd" placeholder="MM-DD-YYYY" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}"  required><br><br>
+
+            </fieldset>
+
+            <h4>The answer is really big.</h4>
+            <input type="radio" id="THE ANSWER" name="response" value="THE ANSWER">
+            <label for="THE ANSWER">THE ANSWER</label><br>
+            <input type="radio" id="Really big" name="response" value="Really big">
+            <label for="Really big">Really big</label><br>
+            <input type="radio" id="An elephant" name="response" value="An elephant">
+            <label for="An elephant">An elephant</label><br><br>
+       
+
+            <input type="submit" value="Submit">
+          </form> 
+        
+        
+
+    </body>
+
+</html>
