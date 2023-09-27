@@ -1,29 +1,63 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <title>Landing page</title>
-      <style>
-          body {
-            background-color: rgb(19, 56, 68);
-            color: rgb(228, 240, 236);
-            font-family: Arial, Helvetica, sans-serif;
-          }
-          
-          a {
-            color: cornflowerblue; 
-          }
-          
-          h1 {
-            color: white;
-            text-align: left;
-          }
-          
-          p {
-            color: rgb(143, 202, 219);
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 20px;
-          }
-          </style>
+    <title>Landing page</title>
+    <style>
+        body {
+          background-color: rgb(19, 56, 68);
+          color: rgb(228, 240, 236);
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        a {
+          color: cornflowerblue; 
+        }
+        
+        h1 {
+          color: white;
+          text-align: left;
+        }
+        
+        p {
+          color: rgb(143, 202, 219);
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 20px;
+        }
+      </style>
+
+    <script>
+      function myFunction() {
+        alert("Hello! I am an alert box!");
+        }
+
+      function changeText(elem) {
+        elem.innerHTML="Ooops!";
+      }
+
+      function changetxt() {
+        document.getElementById('demo').innerHTML='Bye!'
+      }
+
+      function vis() {
+        var x = document.getElementById("boo!");
+        
+        if (x.hasAttribute("hidden")) {
+          alert ("Are you sure?");
+          x.removeAttribute("hidden"); }
+        else document.getElementById("boo!").src = "ok.jpg";      
+        
+      function ajaxchange() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+          document.getElementsById("ajaxtxt").innerHTML = this.responseText;
+        }
+        xhttp.open("GET", "ajax_info.txt" , true);
+        xhttp.send();
+      }
+      </script>
+    
+
+
   </head>
   
   <body>
@@ -39,17 +73,25 @@
     <ol>
         <li><a href="https://www.google.com" target = "_blank">Google</a></li>
         <li><a href="forms1.html">Forms</a></li>
-    </ol>
+    </ol><br> 
+
+    <h2><p>Click the button to display an alert box.</p></h2>
+    <button onclick="myFunction()">Try it</button><br><br>    
+
+    <h2><p id="demo">Hello!</p></h2>
+    <button onclick= "changetxt()">Bye!</button><br><br>
+
+    <h2><p>Do not click below text!</p></h2>
+    <h4 onclick= "changeText(this)">Do not click me!</h4><br><br>
     
-    <h3>Click the button to display an alert box.</h3>
-
-    <button onclick="myFunction()">Try it</button>
-
-    <script>
-    function myFunction() {
-      alert("Hello! I am an alert box!");
-      }
-    </script>
+    <h2><p>Click below button before and after scare.</p></h2>
+    <button onclick= "vis()">Click for scare!</button><br>
+    <h2><img id="boo!" src="boo.png" width="500" height="500" hidden></h2><br>
+    
+    <div id="ajaxtxt">
+    <h2><p>AJAX will change this text when you click on below button!</p></h2>
+    <button onclick= "ajaxchange()">Click for change!</button><br>
+    </div>
 
   </body>
 

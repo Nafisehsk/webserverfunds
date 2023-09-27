@@ -18,6 +18,11 @@
           color: white;
           text-align: left;
         }
+
+        h5 {
+          color: red;
+          text-align: left;
+        }
         
         p {
         color: rgb(143, 202, 219);
@@ -25,25 +30,38 @@
           font-size: 20px;
         }
       </style>
+    <script>
+      function req(elem, x) {
+        y = document.getElementById(x)
+        if (elem.value === "") {
+          y.removeAttribute("hidden"); }
+        else 
+          y.setAttribute("hidden", "true");
+      }
+
+    </script>
   </head>
   
   <body>
     <h1>HTML Forms</h1>
     
-    <form action="/action_page.php">
+    <form name="questions" action="/action_page.php">
       <h2><p>Fill the following form and answer the questions.</p></h2>
       
       <fieldset>
           <legend>Personal info:</legend><br>
 
           <label for="fname">Enter Your First Name:</label><br>
-          <input type="text" id="fname" name="fname" required><br><br>
+          <input type="text" id="fname" name="fname" onblur="req(this, '1')" required>
+          <span id="1" hidden style="color:red">This field is required</span><br><br>
 
           <label for="lname">Enter Your Last Name:</label><br>
-          <input type="text" id="lname" name="lname"  required><br><br>
+          <input type="text" id="lname" name="lname" onblur="req(this, '2')" required>
+          <span id="2" hidden style="color:red">This field is required</span><br><br>
 
           <label for="bd">Enter your Birth date:</label><br>
-          <input type="bd" id="bd" name="bd" placeholder="MM-DD-YYYY" pattern="(0[1-9]|1[1,2])-(0[1-9]|[12][0-9]|3[01])-(19|20)\d{2}"  required><br><br>
+          <input type="bd" id="bd" name="bd" placeholder="MM-DD-YYYY" pattern="(0[1-9]|1[1,2])-(0[1-9]|[12][0-9]|3[01])-(19|20)\d{2}" onblur="req(this, '3')" required>
+          <span id="3" hidden style="color:red">This field is required</span><br><br>
 
       </fieldset><br>
       
