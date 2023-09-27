@@ -44,14 +44,15 @@
         if (x.hasAttribute("hidden")) {
           alert ("Are you sure?");
           x.removeAttribute("hidden"); }
-        else document.getElementById("boo!").src = "ok.jpg";      
+        else document.getElementById("boo!").src = "ok.jpg";  
+      }    
         
       function ajaxchange() {
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function() {
-          document.getElementsById("ajaxtxt").innerHTML = this.responseText;
+          document.getElementById("ajaxtxt").innerHTML = this.responseText;
         }
-        xhttp.open("GET", "ajax_info.txt" , true);
+        xhttp.open("GET", "ajax_info.txt", true);
         xhttp.send();
       }
       </script>
@@ -90,7 +91,7 @@
     
     <div id="ajaxtxt">
     <h2><p>AJAX will change this text when you click on below button!</p></h2>
-    <button onclick= "ajaxchange()">Click for change!</button><br>
+    <button type="button" onclick= "ajaxchange()">Click for change!</button>
     </div>
 
   </body>
