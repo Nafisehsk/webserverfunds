@@ -35,18 +35,18 @@
     </head>
 
     <body>
-        
+        <p><?= var_dump($_POST) ?></p>
         <p>Hello <?= htmlspecialchars($_POST ['fname']) . " " . htmlspecialchars($_POST ['lname'])?>!</p>
         <p>You are born on: <?=$_POST ['bd'] ?></p>
-        <p>You have selected <?= $_POST ['response'] ?></p>
+        <p>You have selected <?= $_POST ['response'] ?> for question 1.</p>
         <?php if (in_array('answer1', $_POST)) {?>
             <p>You have selected the first option for question 2.</p>
         <?php } if (in_array('answer2', $_POST)) {?>
-            <p>You have selected the second option for question 2</p>
+            <p>You have selected the second option for question 2.</p>
         <?php } elseif ((in_array('answer1', $_POST)) && (in_array('answer2', $_POST))) {?>
-            <p>You have selected both options for question 2</p>
+            <p>You have selected both options for question 2.</p>
         <?php } else { ?>
-            <p>You have selected no option for question 2</p>
+            <p>You have selected no option for question 2.</p>
         <?php } ?>
                
     </body>
