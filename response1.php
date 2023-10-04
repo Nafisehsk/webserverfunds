@@ -47,7 +47,7 @@
             <p>You have selected the first option for question 2.</p>
         <?php } else { ?>
             <p>You have not selected any options for question 2.</p>
-        <?php }endif; ?>
+        <?php }endif ?>
                
     </body>
 
