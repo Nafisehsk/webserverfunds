@@ -39,12 +39,12 @@
         <p>Hello <?= htmlspecialchars($_POST ['fname']) . " " . htmlspecialchars($_POST ['lname'])?>!</p>
         <p>You are born on: <?=$_POST ['bd'] ?></p>
         <p>You have selected "<?= $_POST ['response'] ?>" for question 1.</p>
-        <p>answer 1 in array: <?= isset($_POST["answer1"]) ?></p>
-        <?php if ((isset("answer1", $_POST)) && (isset("answer2", $_POST))) {?> 
+
+        <?php if ((isset($_POST["answer1"])) && (isset($_POST["answer2"]))) {?> 
             <p>You have selected both options for question 2.</p>
-        <?php } elseif (isset("answer2", $_POST)) {?>
+        <?php } elseif (isset($_POST["answer2"])) {?>
             <p>You have selected the second option for question 2.</p>
-        <?php } elseif (isset("answer1", $_POST)) {?>
+        <?php } elseif (isset($_POST["answer1"])) {?>
             <p>You have selected the first option for question 2.</p>
         <?php } else { ?>
             <p>You have not selected any options for question 2.</p>
