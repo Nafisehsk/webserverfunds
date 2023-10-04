@@ -36,8 +36,8 @@
 
     <body>
         
-        <p>Hello <?= htmlspecialchars($_POST ['fname']); . htmlspecialchars($_POST ['lname']);?></p>
-        <p>Your are born on: <?= (int)$_POST ['bd']; ?></p>
+        <p>Hello <?= htmlspecialchars($_POST ['fname']) . " " . htmlspecialchars($_POST ['lname'])?></p>
+        <p>Your are born on: <?= (int)$_POST ['bd'] ?></p>
         <p>You have selected <?= $_POST ['response'] ?></p>
         <?php if (in_array('answer1', $_POST)): ?>
             <p>You have selected the first option for question 2.</p>
