@@ -37,16 +37,16 @@
     <body>
         
         <p>Hello <?= htmlspecialchars($_POST ['fname']); . htmlspecialchars($_POST ['lname']);?></p>
-        <p>Your are born on: <?= (int)$_POST ['bd']); ?></p>
+        <p>Your are born on: <?= (int)$_POST ['bd']; ?></p>
         <p>You have selected <?= $_POST ['response'] ?></p>
         <?php if (in_array('answer1', $_POST)): ?>
-            <p>echo "You have selected the first option for question 2."</p>
+            <p>You have selected the first option for question 2.</p>
         <?php if (in_array('answer2', $_POST)): ?>
             <p>echo "You have selected the second option for question 2"</p>
         <?php else if ((in_array('answer1', $_POST)) && (in_array('answer2', $_POST))): ?>
-            <p>echo "You have selected both options for question 2"</p>
+            <p>You have selected both options for question 2</p>
         <?php else: ?>
-            <p>else echo "You have selected no option for question 2"</p>
+            <p>You have selected no option for question 2</p>
         <?php endif; ?>
              
 
