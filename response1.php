@@ -30,14 +30,7 @@
             }
         
         </style>
-
-            if (in_array('answer1', $_POST))
-                echo "You have selected the first option for question 2"
-            if (in_array('answer2', $_POST)) echo "You have selected the second option for question 2"
-            if ((in_array('answer1', $_POST)) && (in_array('answer2', $_POST)) )
-                echo "You have selected both options for question 2"
-            else echo "You have selected no option for question 2"
-            
+           
 
     </head>
 
