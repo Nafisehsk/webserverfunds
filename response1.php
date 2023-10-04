@@ -40,11 +40,11 @@
         <p>You are born on: <?=$_POST ['bd'] ?></p>
         <p>You have selected "<?= $_POST ['response'] ?>" for question 1.</p>
         <p>answer 1 in array: <?= isset($_POST["answer1"]) ?></p>
-        <?php if ((in_array("answer1", $_POST)) && (in_array("answer2", $_POST))) {?> 
+        <?php if ((isset("answer1", $_POST)) && (isset("answer2", $_POST))) {?> 
             <p>You have selected both options for question 2.</p>
-        <?php } elseif (in_array("answer2", $_POST)) {?>
+        <?php } elseif (isset("answer2", $_POST)) {?>
             <p>You have selected the second option for question 2.</p>
-        <?php } elseif (in_array("answer1", $_POST)) {?>
+        <?php } elseif (isset("answer1", $_POST)) {?>
             <p>You have selected the first option for question 2.</p>
         <?php } else { ?>
             <p>You have not selected any options for question 2.</p>
