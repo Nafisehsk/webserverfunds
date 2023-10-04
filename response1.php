@@ -38,7 +38,8 @@
         <p><?= var_dump($_POST) ?></p>
         <p>Hello <?= htmlspecialchars($_POST ['fname']) . " " . htmlspecialchars($_POST ['lname'])?>!</p>
         <p>You are born on: <?=$_POST ['bd'] ?></p>
-        <p>You have selected <?= $_POST ['response'] ?> for question 1.</p>
+        <p>You have selected "<?= $_POST ['response'] ?>" for question 1.</p>
+        <p>answer 1 in array: <?= in_array("answer1", $_POST) ?></p>
         <?php if ((in_array("answer1", $_POST)) && (in_array("answer2", $_POST))) {?> 
             <p>You have selected both options for question 2.</p>
         <?php } elseif (in_array("answer2", $_POST)) {?>
