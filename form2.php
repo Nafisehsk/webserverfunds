@@ -51,7 +51,7 @@
         if (!$conn) {
             die("Connection failed: {mysqli_connect_error()}");
         }
-        $sql = "select * from courses;";
+        $sql = "select course_num from courses;";
         $result = mysqli_query($conn, $sql);
     ?>
 
@@ -64,10 +64,10 @@
       <h2><p>Select a Course Number to obtain information about it.</p></h2>
       
       <fieldset>
-          <legend></legend><br>
+          <legend>Course</legend><br>
 
           <label for="semester">Enter Semeter:</label><br>
-            <input type="text" id="sem" name="sem" placeholder = 'F23' onblur="req(this, '1')" required>
+            <input type="text" id="sem" name="sem" placeholder = 'F23' onblur="req(this, '2')" required>
             <span id="2" hidden style="color:red">This field is required</span><br><br>
 
         
@@ -78,28 +78,24 @@
             <option value="ET">243-523-DW</option>
             <option value="CB">234-568-DW</option>
             <option value="ESH">243-513-DW</option> -->
-          
-            <span id="1" hidden style="color:red">This field is required</span><br><br>
 
             <?php
                     
-                    // Use the ternary operator
-                    echo $result ? "Success!" : "Failure: {mysqli_error($conn)}";
+                // Use the ternary operator
+                echo $result ? "Success!" : "Failure: {mysqli_error($conn)}";
 
-                    foreach($result as $row) 
-                    {
-                        echo "<option value='{$row['course_number']}'>{$row['course_number']}</option>\n";
-                    }
-                    // Don't forget to close the connection!
-                    mysqli_close($conn);
+                foreach($result as $row) 
+                {
+                    echo "<option value='{$row['course_number']}'>{$row['course_number']}</option>\n";
+                }
+                // Don't forget to close the connection!
+                mysqli_close($conn);
             ?>
             
         </select>
       </fieldset><br>
       
-     
-
-        <input type="submit" value="Submit">
+      <input type="submit" value="Submit">
     </form> 
       
 
