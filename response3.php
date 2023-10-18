@@ -37,7 +37,7 @@
             $password = "nafispi23";
             $database = "Course_Schedule";
             $conn = mysqli_connect($server, $username, $password, $database);
-            $course_number = htmlspecialchars($POST["coursenum"]);
+            $course_number = htmlspecialchars($POST["cnum"]);
            
             if (!$conn) {
                 die("Connection failed: {mysqli_connect_error()}");
