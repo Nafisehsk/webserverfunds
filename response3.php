@@ -39,17 +39,14 @@
             $conn = mysqli_connect($server, $username, $password, $database);
             $course_number = htmlspecialchars($POST["cnum"]);
            
-            if (!$conn) {
-                die("Connection failed: {mysqli_connect_error()}");
-              }
-              $sql = "select * from courses where course_number='{$course_number}';";
-              $result = mysqli_query($conn, $sql);
+            $sql = "select course_name, day, time from courses where course_number='{$course_number}';";
+            $result = mysqli_query($conn, $sql);
           ?>
 
     </head>
 
     <body>
-        <p>You selected course <?= $course_number ?>!</p>
+        <p>You selected course <?= $course_number?></p>
 
         <?php 
             foreach($result as $row) // There should only be one row returned!
