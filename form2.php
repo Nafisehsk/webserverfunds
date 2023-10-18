@@ -88,7 +88,7 @@
 
                     foreach($result as $row) 
                     {
-                        echo "<option value='{$row['course_number']}'>{$row['course_name']}</option>\n";
+                        echo "<option value='{$row['course_number']}'>{$row['course_number']}</option>\n";
                     }
                     // Don't forget to close the connection!
                     mysqli_close($conn);
