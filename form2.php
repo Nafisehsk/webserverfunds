@@ -51,7 +51,7 @@
         if (!$conn) {
             die("Connection failed: {mysqli_connect_error()}");
         }
-        $sql = "select course_num from courses;";
+        $sql = "select course_number from courses;";
         $result = mysqli_query($conn, $sql);
     ?>
 
