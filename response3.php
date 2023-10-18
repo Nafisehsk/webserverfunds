@@ -40,15 +40,18 @@
             $course_number = htmlspecialchars($POST["cnum"]);
             $semester = htmlspecialchars($POST["sem"]);
            
-            $sql = "select course_name, day, time from courses where course_number='{$course_number}';";
+            $sql = "select * from courses where course_number='{$course_number}';";
             $result = mysqli_query($conn, $sql);
             $sql2 = "insert into courses (semester) values ('{$semester}');";
+            
           ?>
 
     </head>
 
     <body>
-        You selected course <?= $course_number?>
+        <p>You selected course <?= $course_number?></p>
+        <p><?= $sql ?></p>
+        <p><?= mysqli_error($conn) ?></p>
 
         <?php 
             foreach($result as $row) // There should only be one row returned!
