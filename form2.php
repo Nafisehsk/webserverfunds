@@ -73,20 +73,20 @@
         
           <label for="coursenum">Select course: </label><br>
           <select id="cnum" name="cnum">
-            <option value="WL">243-522-DW</option>
+            <!-- <option value="WL">243-522-DW</option>
             <option value="TS">234-567-DW</option>
             <option value="ET">243-523-DW</option>
             <option value="CB">234-568-DW</option>
-            <option value="ESH">243-513-DW</option>
+            <option value="ESH">243-513-DW</option> -->
 
             <?php
                     
-                // Use the ternary operator
-                echo $result ? "Success!" : "Failure: {mysqli_error($conn)}";
+                // // Use the ternary operator
+                // echo $result ? "Success!" : "Failure: {mysqli_error($conn)}";
 
                 foreach($result as $row) 
                 {
-                    echo "<option value='{$row['course_name']}'>{$row['course_number']}</option>\n";
+                    echo "<option value='{$row['course_number']}'>{$row['course_number']}</option>\n";
                 }
                 // Don't forget to close the connection!
                 mysqli_close($conn);
