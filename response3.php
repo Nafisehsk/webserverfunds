@@ -42,7 +42,7 @@
             if (!$conn) {
                 die("Connection failed: {mysqli_connect_error()}");
               }
-              $sql = "select course_name, day, time from courses where course_number='{$course_number}';";
+              $sql = "select * from courses where course_number='{$course_number}';";
               $result = mysqli_query($conn, $sql);
           ?>
 
@@ -54,7 +54,7 @@
         <?php 
             foreach($result as $row) // There should only be one row returned!
             {
-                echo "{$row['course_name']} on {$row['day']}s from {$row['time']";
+                echo "{$row['course_name']} on {$row['day']}s from {$row['time']}";
             }
             // Don't forget to close the connection!
             mysqli_close($conn);
