@@ -49,9 +49,7 @@
     </head>
 
     <body>
-        <p><?= var_dump($_POST) ?></p>
         <p>You selected course <?= $course_number ?>!</p>
-
 
         <?php 
             foreach($result as $row) // There should only be one row returned!
