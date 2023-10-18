@@ -66,8 +66,8 @@
       <fieldset>
           <legend></legend><br>
 
-          <label for="sem">Enter Semeter:</label><br>
-            <input type="text" id="fname" name="fname" onblur="req(this, '1')" required>
+          <label for="semester">Enter Semeter:</label><br>
+            <input type="text" id="sem" name="sem" placeholder = 'F23' onblur="req(this, '1')" required>
             <span id="2" hidden style="color:red">This field is required</span><br><br>
 
         
