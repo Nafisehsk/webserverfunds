@@ -50,14 +50,14 @@
     </head>
 
     <body>
-        You selected course <?= $course_number?>
+        You selected course <?= $course_number?>. <br>
         <!-- <p><?= $sql ?></p>
         <p><?= mysqli_error($conn) ?></p> -->
 
         <?php 
             foreach($result as $row) // There should only be one row returned!
             {
-                echo "{$row['course_name']} on {$row['day']}s from {$row['time']}";
+                echo "{$row['course_name']} on {$row['day']}s from {$row['time']}.";
             }
             // Don't forget to close the connection!
             mysqli_close($conn);
