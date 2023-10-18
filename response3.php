@@ -46,7 +46,7 @@
     </head>
 
     <body>
-        <p>You selected course <?= $course_number?></p>
+        You selected course <?= $course_number?>
 
         <?php 
             foreach($result as $row) // There should only be one row returned!
