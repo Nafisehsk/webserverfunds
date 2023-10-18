@@ -42,7 +42,7 @@
            
             $sql = "select * from courses where course_number='{$course_number}';";
             $result = mysqli_query($conn, $sql);
-            $sql2 = "insert into courses (semester) values ('{$semester}');";
+            $sql2 = "update courses set semester = '{$semester}' where course_number='{$course_number}';";
             $result1 = mysqli_query($conn, $sql2);
 
           ?>
