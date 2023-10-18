@@ -37,13 +37,14 @@
             $password = "nafispi23";
             $database = "Course_Schedule";
             $conn = mysqli_connect($server, $username, $password, $database);
-            $course_number = htmlspecialchars($POST["cnum"]);
-            $semester = htmlspecialchars($POST["sem"]);
+            $course_number = htmlspecialchars($_POST["cnum"]);
+            $semester = htmlspecialchars($_POST["sem"]);
            
             $sql = "select * from courses where course_number='{$course_number}';";
             $result = mysqli_query($conn, $sql);
             $sql2 = "insert into courses (semester) values ('{$semester}');";
-            
+            $result1 = mysqli_query($conn, $sql2);
+
           ?>
 
     </head>
