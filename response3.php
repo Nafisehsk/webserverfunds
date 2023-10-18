@@ -38,9 +38,11 @@
             $database = "Course_Schedule";
             $conn = mysqli_connect($server, $username, $password, $database);
             $course_number = htmlspecialchars($POST["cnum"]);
+            $semester = htmlspecialchars($POST["sem"]);
            
             $sql = "select course_name, day, time from courses where course_number='{$course_number}';";
             $result = mysqli_query($conn, $sql);
+            $sql2 = "insert into courses (semester) values ('{$semester}');";
           ?>
 
     </head>
