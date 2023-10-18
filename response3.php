@@ -50,9 +50,9 @@
     </head>
 
     <body>
-        <p>You selected course <?= $course_number?></p>
-        <p><?= $sql ?></p>
-        <p><?= mysqli_error($conn) ?></p>
+        You selected course <?= $course_number?>
+        <!-- <p><?= $sql ?></p>
+        <p><?= mysqli_error($conn) ?></p> -->
 
         <?php 
             foreach($result as $row) // There should only be one row returned!
